@@ -14,6 +14,7 @@ Before you can run this project, you will need to set three system environment v
 
 For Mac and Linux, environment variables can be set by opening a terminal window and typing the following three commands - replace all the characters after the `=` with values from your Twilio account:
 ```
+    # Since these are secrets, if you put a space in front before pasting some shells will avoid saving it to the history
     export TWILIO_ACCOUNT_SID=ACXXXXXXXXX
     export TWILIO_AUTH_TOKEN=XXXXXXXXX
     export TWILIO_PHONE_NUMBER=+16518675309
@@ -28,17 +29,14 @@ On Windows, the easiest way to set permanent environment variables (as of Window
 
 1. Clone this repository. Navigate to the folder with the source code on your machine in a terminal window.
 
-1. From there we recommend creating a [virtualenv](https://docs.python.org/3/library/venv.html) and activating it to avoid installing dependencies globaly on your computer.
 
-    `virtualenv -p python3 env`
-    `source env/bin/activate`
+1. Get a handy virtualenv/dependency manager that handles the virtualenv creation and activation automatically for you.
 
-1. Install dependencies:
+   `pip3 install --user pipenv` 
 
-    `pip install -r requirements.txt`
+1. then `pipenv install`
 
-1. Run the web app:
-    `python app.py`
+1. then `pipenv run python app.py`
 
 1. Open the app in your [browser](http://localhost:5000/) 
 
